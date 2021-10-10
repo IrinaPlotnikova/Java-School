@@ -12,7 +12,8 @@ public class TwoSums {
      */
     public int[] getTwoSum(int[] nums, int target) {
         // асимптотика O(n * log(n))
-        for (int i = 0; i < nums.length; i++){
+        int targetHalf = target / 2;  // targetHalf == floor(target / 2)
+        for (int i = 0; i < nums.length && nums[i] <= targetHalf; i++){
             int rightBound = nums.length;
             int leftBound = i;
 
